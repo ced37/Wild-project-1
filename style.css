@@ -1,3 +1,8 @@
+:root {
+  --grey: #333333;
+  --grey-light: #7e7e7e;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +15,34 @@ img {
     display: block;
 }
 
-body {
-    font-family: "Lato", sans-serif;
+main {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Blinker', sans-serif;
   }
+
+header {
+  background-color: #aedd70;
+}
+
+.mainTitle {
+  display:flex;
+  justify-content: center;
+}
+
+h1 {
+  /* text-align: center; */
+  /* display: block; */
+}
+
+.logo {
+  width: 40px;
+  border-radius: 50%;
+}
+
+
   
   .sidenav {
     height: 100%;
@@ -47,8 +77,19 @@ body {
     font-size: 36px;
     margin-left: 50px;
   }
+
+  /* main {
+    position: absolute;
+  } */
+
+  .hamburger-button {
+    position: sticky;
+    
+  }
   
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  
