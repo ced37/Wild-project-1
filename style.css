@@ -1,6 +1,8 @@
 :root {
   --grey: #333333;
-  --grey-light: #7e7e7e;
+  --lightGrey: #7e7e7e;
+  --header: #aedd70;;
+  --burger: #075c07;
 }
 
 * {
@@ -19,77 +21,74 @@ main {
   font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .sidenav a {
   font-family: 'Blinker', sans-serif;
   }
 
 header {
-  background-color: #aedd70;
+  background-color: var(--header);
+  padding: 30px;
 }
 
 .mainTitle {
   display:flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 h1 {
-  /* text-align: center; */
-  /* display: block; */
+  color: var(--burger);
+  white-space: nowrap;
 }
 
+.hamburger-button {
+  color: var(--burger);
+  background-color: var(--header);    border-radius: 2px;
+  font-size: 30px;
+  cursor: pointer;
+}
 .logo {
   width: 40px;
   border-radius: 50%;
 }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+  
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--header);
+  display: block;
+  transition: 0.3s;
+}
 
-  
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidenav .xCloseButton {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
+.sidenav a:hover {
+  color: #f1f1f1;
+}
 
-  /* main {
-    position: absolute;
-  } */
+.sidenav .xCloseButton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
 
-  .hamburger-button {
-    position: sticky;
-    
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
 
-  
+
+/* @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} */
+
