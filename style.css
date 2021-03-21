@@ -5,29 +5,37 @@
   --burger: #075c07;
 }
 
-* {
+/* reset CSS */
+*:not(ul) {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* reponsive images */
 img {
     width: 100%;
     height: auto;
     display: block;
 }
 
+/* general css */
 main {
   font-family: 'Roboto', sans-serif;
 }
 
 h1, h2, h3, h4, .sidenav a {
   font-family: 'Blinker', sans-serif;
-  }
+}
 
+ul {
+  list-style-type: none;
+}
+
+/* header */
 header {
   background-color: var(--header);
-  padding: 30px;
+  padding: 30px 0;
 }
 
 .mainTitle {
@@ -42,10 +50,12 @@ h1 {
 
 .hamburger-button {
   color: var(--burger);
-  background-color: var(--header);    border-radius: 2px;
+  background-color: var(--header);    
+  border-radius: 2px;
   font-size: 30px;
   cursor: pointer;
 }
+
 .logo {
   width: 40px;
   border-radius: 50%;
@@ -63,6 +73,7 @@ h1 {
   transition: 0.5s;
   padding-top: 60px;
 }
+
   
 .sidenav a {
   padding: 8px 8px 8px 32px;
@@ -84,11 +95,85 @@ h1 {
   font-size: 36px;
   margin-left: 50px;
 }
+/* ----------------------------------------------------*/
 
+/* outils.html */
+.aggregator h3 > img {
+  width: 16px;
+  display: initial;
+  vertical-align: middle;
+}
 
+/* ------------------------------------------------- */
+
+@media screen and (min-width: 800px) {
+  body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header {
+    padding: initial;
+    position: sticky;
+    top: -100px;
+  }
+
+  .mainTitle {
+    justify-content: center;
+    align-items: baseline;
+    font-size: 40px;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .mainTitle a {
+    margin: auto 0 auto 1em;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .sidenav {
+    height: initial;
+    width: initial;
+    position: initial;
+    background-color: var(--header);
+    overflow-x: initial;
+    padding-top: initial;
+  }
+
+  .sidenav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .sidenav li:first-child {
+    display: none;
+  }
+
+  .sidenav a {
+    color: #f1f1f1;
+    font-weight: 600;
+    padding-left: 8px;
+    display: block;
+    border-bottom: 3px solid transparent;
+  }
+
+  .sidenav a:hover {
+    color: var(--burger);
+    border-bottom: 3px solid var(--burger);
+  }
+
+}
 
 /* @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 } */
+
 
