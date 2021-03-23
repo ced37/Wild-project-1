@@ -1,12 +1,18 @@
 :root {
-  --grey: #333333;
-  --lightGrey: #7e7e7e;
+  --font-color: #333333;
+  --a-color: rgb(202, 195, 100);
   --header: #aedd70;;
   --burger: #075c07;
+  --h1-color:  rgba(7, 90, 7, 1); /* Just like var(--burger) */
+  --h2-color: rgba(7, 92, 7, 0.8);
+  --h3-color: rgba(7, 92, 7, 0.6);
+  --h4-color: rgba(7, 92, 7, 0.4);
+  --line-height: 1.5;
+
 }
 
 /* reset CSS */
-*:not(ul) {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -22,13 +28,14 @@ img {
 /* general css */
 main {
   font-family: 'Roboto', sans-serif;
+  color: var(--font-color);
 }
 
 h1, h2, h3, h4, .sidenav a {
   font-family: 'Blinker', sans-serif;
 }
 
-ul {
+ul, ol{
   list-style-type: none;
 }
 
@@ -44,7 +51,7 @@ header {
 }
 
 h1 {
-  color: var(--burger);
+  color: var(--font-color);
   white-space: nowrap;
 }
 
@@ -95,6 +102,46 @@ h1 {
   font-size: 36px;
   margin-left: 50px;
 }
+
+/*  main */
+
+h2 {
+  color: var(--h2-color);
+  text-align: center;
+  padding: 2em;
+  font-size: 2em;
+}
+
+h3 {
+  color: var(--h3-color);
+  font-size: 1.5em;
+  padding: 1.5em 1.5em 1.5em 0;
+}
+
+h4, h5 {
+  color: var(--h4-color);
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p, li {
+  line-height: var(--line-height);
+  text-align: justify;
+}
+
+/* --------------------------------------------------- */
+
+/* index.html */
+  .introduction p {
+    padding-bottom: 2em;
+  }
+
+  .key-stapes p {
+
+  }
 /* ----------------------------------------------------*/
 
 /* outils.html */
@@ -106,17 +153,26 @@ h1 {
 
 /* ------------------------------------------------- */
 
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .introduction p {
+    column-count: 2;
+  }
+}
+
 @media screen and (min-width: 800px) {
+  /* general css */
+
   body {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    height: 400vh;
   }
 
   header {
     padding: initial;
     position: sticky;
-    top: -100px;
+    top: -200px;
   }
 
   .mainTitle {
@@ -168,6 +224,32 @@ h1 {
     color: var(--burger);
     border-bottom: 3px solid var(--burger);
   }
+
+  /* -------------------------------------------- */
+
+  /* index.html */
+
+    .introduction p {
+      column-count: 3;
+    }
+
+   .key-stapes ol {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     padding: 0;
+    }
+    
+    .key-stapes ol li {
+      flex: 1 1 20%;
+      padding: 0 1em;
+   }
+
+    .key-stapes ol li h5 {
+      margin: 0;
+      padding: 1em;
+      white-space: nowrap;
+    }
 
 }
 
