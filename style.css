@@ -1,54 +1,261 @@
+:root {
+  --font-color: #333333;
+  --a-color: rgb(202, 195, 100);
+  --header: #aedd70;;
+  --burger: #075c07;
+  --h1-color:  rgba(7, 90, 7, 1); /* Just like var(--burger) */
+  --h2-color: rgba(7, 92, 7, 0.8);
+  --h3-color: rgba(7, 92, 7, 0.6);
+  --h4-color: rgba(7, 92, 7, 0.4);
+  --line-height: 1.5;
+
+}
+
+/* reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* reponsive images */
 img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-body {
-    font-family: "Lato", sans-serif;
-  }
+/* general css */
+main {
+  font-family: 'Roboto', sans-serif;
+  color: var(--font-color);
+}
+
+h1, h2, h3, h4, .sidenav a {
+  font-family: 'Blinker', sans-serif;
+}
+
+ul, ol{
+  list-style-type: none;
+}
+
+/* header */
+header {
+  background-color: var(--header);
+  padding: 30px 0;
+}
+
+.mainTitle {
+  display:flex;
+  justify-content: space-around;
+}
+
+h1 {
+  color: var(--font-color);
+  white-space: nowrap;
+}
+
+.hamburger-button {
+  color: var(--burger);
+  background-color: var(--header);    
+  border-radius: 2px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
   
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--header);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .xCloseButton {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*  main */
+
+h2 {
+  color: var(--h2-color);
+  text-align: center;
+  padding: 2em;
+  font-size: 2em;
+}
+
+h3 {
+  color: var(--h3-color);
+  font-size: 1.5em;
+  padding: 1.5em 1.5em 1.5em 0;
+}
+
+h4, h5 {
+  color: var(--h4-color);
+  font-size: 1em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p, li {
+  line-height: var(--line-height);
+  text-align: justify;
+}
+
+/* --------------------------------------------------- */
+
+/* index.html */
+  .introduction p {
+    padding-bottom: 2em;
+  }
+
+  .key-stapes p {
+
+  }
+/* ----------------------------------------------------*/
+
+/* outils.html */
+.aggregator h3 > img {
+  width: 16px;
+  display: initial;
+  vertical-align: middle;
+}
+
+/* ------------------------------------------------- */
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  .introduction p {
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* general css */
+
+  body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400vh;
+  }
+
+  header {
+    padding: initial;
+    position: sticky;
+    top: -100px;
+  }
+
+  .mainTitle {
+    justify-content: center;
+    align-items: baseline;
+    font-size: 40px;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .mainTitle a {
+    margin: auto 0 auto 1em;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
   .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    height: initial;
+    width: initial;
+    position: initial;
+    background-color: var(--header);
+    overflow-x: initial;
+    padding-top: initial;
   }
-  
+
+  .sidenav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .sidenav li:first-child {
+    display: none;
+  }
+
   .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
     color: #f1f1f1;
+    font-weight: 600;
+    padding-left: 8px;
+    display: block;
+    border-bottom: 3px solid transparent;
   }
-  
-  .sidenav .xCloseButton {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+
+  .sidenav a:hover {
+    color: var(--burger);
+    border-bottom: 3px solid var(--burger);
   }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+
+  /* -------------------------------------------- */
+
+  /* index.html */
+
+    .introduction p {
+      column-count: 3;
+    }
+
+   .key-stapes ol {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     padding: 0;
+    }
+    
+    .key-stapes ol li {
+      flex: 1 1 20%;
+      padding: 0 1em;
+   }
+
+    .key-stapes ol li h5 {
+      margin: 0;
+      padding: 1em;
+      white-space: nowrap;
+    }
+
+}
+
+/* @media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} */
+
+
