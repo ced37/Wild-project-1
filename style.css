@@ -189,6 +189,10 @@ a {
   text-align: right;
 }
 
+.stape-link a:active {
+  opacity: 0.5;
+}
+
 .stape-link1 a {
   background-color: var(--stape1-like);
   color: var(--a-color)
