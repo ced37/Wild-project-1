@@ -47,14 +47,15 @@ header {
 
 .mainTitle {
   display:flex;
-  justify-content: space-around;
-}
-
-h1 {
-  color: var(--font-color);
-  white-space: nowrap;
-}
-
+  display:flex;
+  justify-content: space-evenly;
+  margin: 1rem;
+ }
+ 
+ .goal{
+   width: 45%;
+ }
+ 
 .hamburger-button {
   color: var(--burger);
   background-color: var(--header);    
@@ -132,6 +133,8 @@ p, li {
   text-align: justify;
 }
 
+
+
 /* --------------------------------------------------- */
 
 /* index.html */
@@ -152,7 +155,98 @@ p, li {
 }
 
 /* ------------------------------------------------- */
+/* kifekoi.html*/
 
+/*main*/
+
+.methodology{
+  display:flex;
+  justify-content: space-around;
+  margin: 1rem;
+ }
+ 
+ .goal{
+   background-color: #aedd70;
+   border-radius: 5px;
+   width: 45%;
+ }
+ 
+ .goal p {
+   margin-bottom: 2rem;
+   text-align: center;
+   font-weight: bold;
+  
+ }
+ 
+ .action{
+   background-color: #aedd70;
+   border-radius: 5px;
+   width: 45%;
+ }
+ 
+ .action p {
+   margin-bottom: 2rem;
+   text-align: center;
+   font-weight: bold;
+ }
+
+#clickclick {
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 10px;
+  color: var(--h3-color);
+  font-weight: bold;
+  padding-top: 3rem;
+}
+
+.logoclick {
+  width: 50px;
+}
+
+
+.defferentwatchman ul{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.defferentwatchman ul li{
+  flex: 1 1 45%;
+  margin: 1rem;
+  background-color: #aedd70;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.defferentwatchman ul li h3{
+  text-align: center;
+}
+.emoji {
+  width: 100px;
+  display: initial;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+@media screen and (min-width:100px) and (max-width: 635px) {
+  .methodology{
+    display:flex;
+    flex-flow: column;
+    margin: 1rem;
+  }
+  .goal {
+    width: 100%;
+  }
+  .action {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+
+
+/*--------------------------------------------------*/
 @media screen and (min-width: 400px) and (max-width: 800px) {
   .introduction p {
     column-count: 2;
