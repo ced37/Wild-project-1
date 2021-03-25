@@ -93,6 +93,7 @@ header {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
+  font-weight: 300;
   color: var(--header);
   display: block;
   transition: 0.3s;
@@ -241,6 +242,103 @@ a {
   background-color: var(--stape3);
   margin-bottom: 1rem;
 }
+/* --------------------------------------------------- */
+
+/* sources.html */
+.newsSites p:nth-child(3) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "li1" "li2" "li3" "li4" "li5" "li6" "li7" "li8";
+}
+
+.grid-container li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto 1.5rem;
+  padding: 1rem;
+  height: 100%;
+  border-radius: 5px;
+}
+
+
+.grid-li1 {
+  grid-area: li1;
+  background-color: var(--h4-color);
+}
+
+.grid-li2 {
+  grid-area: li2;
+}
+
+.grid-li3 {
+  grid-area: li3;
+  background-color: var(--h4-color);
+}
+
+.grid-li4 {
+  grid-area: li4;
+}
+
+.grid-li5 {
+  grid-area: li5;
+  background-color: var(--h4-color);
+}
+
+.grid-li6 {
+  grid-area: li6;
+}
+
+.grid-li7 {
+  grid-area: li7;
+}
+
+.grid-li8 {
+  grid-area: li8;
+}
+
+.grid-li8 li:first-child {
+  background-color: var(--h4-color);
+}
+
+.grid-container p {
+  /* margin: 0 auto; */
+  text-align: justify;
+  /* width: 20%; */
+}
+
+.grid-container img {
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.expertsBlogs li, .otherSources li {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+
+.expertsBlogs a, .otherSources a {
+  color:rgba(2, 54, 2, 0.8);
+  text-decoration:none;
+}
+
+.expertsBlogs a:hover, .otherSources a:hover {
+  color:rgb(5, 73, 5);
+}
+
+.expertsBlogs a:visited, .otherSources a:visited {
+  color: rgb(3, 182, 3);
+}
+
 /* ----------------------------------------------------*/
 
 /* outils.html */
@@ -472,9 +570,41 @@ main {
 
 /*--------------------------------------------------*/
 @media screen and (min-width: 400px) and (max-width: 800px) {
-  .introduction p {
+  /* index.html */
+  .introduction p, .newsSites h2 + p {
     column-count: 2;
   }
+
+  /* sources.html */
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "li1 li2" "li3 li4" "li5 li6" "li7 li7" "li8 li8";
+  }
+
+  .grid-li1 {
+    background-color: var(--h4-color);
+  }
+  
+  .grid-li3 {
+    background-color: initial;
+  }
+  
+  .grid-li4 {
+    background-color: var(--h4-color);
+  }
+  
+  .grid-li5 {
+    background-color: var(--h4-color);
+  }
+
+  .expertsBlogs ul, .otherSources ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+
 }
 
 @media screen and (min-width: 800px) {
@@ -562,7 +692,7 @@ main {
     }
     
     .key-stapes ol li {
-      flex: 1 1 20%;
+      flex: 0 1 20%;
       padding: 0 1em;
    }
 
@@ -572,6 +702,12 @@ main {
       white-space: nowrap;
     }
 
+  /* sources.html */
+  .expertsBlogs ul, .otherSources ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 
 /* @media screen and (max-height: 450px) {
