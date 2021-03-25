@@ -26,26 +26,28 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="flex-container">
+        
+        
         <section class="newsSites">
-            <h2>sites d'actualités et blogs d'experts</h2>
+            <h2>Sites d'actualités et blogs d'experts</h2>
             <p>Différents canaux de veilles sont proposés par les auteurs de sites d'actualités et de blogs.<br>
                 Il consistera à regarder ce qui vous est proposé (et des fois jusque dans les bas de pages).<br>
                 Quelques classiques sont à signaler :
             </p>
             <ul>
-                <li>les newsletters</li>
-                <li>les flux RSS</li>
-                <li>les podcasts</li>
-                <li>les liens vers les chaînes YouTube</li>
-                <li>toute l'exposition médiatique sur les réseaux sociaux que compte la création</li>
+                <li><em>- les newsletters</em></li>
+                <li><em>- les flux RSS</em></li>
+                <li><em>- les podcasts</em></li>
+                <li><em>- les liens vers les chaînes YouTube</em></li>
+                <li><em>-toute l'exposition médiatique sur les réseaux sociaux que compte la création</em></li>
                 
             </ul>
         </section>
 
 
         <section class="youTube">
-            <h2>YouTube</h2>
+            <h2>YouTube <img src="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc" alt="icone de youtube"></h2>
             <p>Le monde de la tech fascine les communautés et les youtubeurs spécialisés se sont rapidement emparés du sujet.</p>
             <ul>
                 <li>On peux donc s'abonner à leurs pages</li>
@@ -55,44 +57,51 @@
         </section>
 
         <section class="aggregator">
-            <h2>pensez à agréger</h2>
+            <div class="agreger">
+            <h2>Pensez à agréger</h2>
             <p>Ce n'est pas tout de moissonner le web, il faut aussi stocker ses récoltes. 
                 Tous ces canaux demandent un peu d'organisation pour ne pas passer son temps de veille à réduire des fenêtres devenues encombrantes 
                 pour lire le contenu d'une fenêtre cachées derrière une forêt d'une multitude d'autres.<br>
                 Heureusement quelques applis sympas peuvent nous aider à mieux ranger notre collecte d'infos.
             </p>
-            <ul>
-                <li>
-                    <h3>les agrégateurs de flux <img src="images/feed-icon.png" alt="icône de flux"></h3>
+            </div>
+            
+            <ul class="fluxWrappers">
+                <li class="flux">
+                    <h3>Les agrégateurs de flux <img src="images/feed-icon.png" alt="icône de flux"></h3>
                     <p>
                         Un agrégateur est une entité qui regroupe plusieurs flux en un seul. <br>
                         Un logiciel agrégateur tresse plusieurs fils de syndication en même temps. Il prévient de la mise à jour de sites web ou des actualités qu'ils publient et importe le contenu nouveau en question. 
                     </p>
                     <ul>
-                        <li><a href="https://feedly.com/">feedly</a></li>
-                        <li><a href="https://www.inoreader.com/">Inoreader</a></li>
-                        <li><a href="https://tt-rss.org/">Tiny Tiny RSS</a></li>
-                        <li><a href="https://www.thunderbird.net/fr/">Thunderbird</a></li>
-                        <li>et bien d'autres <a href="https://alternativeto.net/software/feedly/about/">ici</a>  et <a href="https://fr.wikipedia.org/wiki/Comparaison_des_agr%C3%A9gateurs_de_flux">ici</a></li>
+                        <li><a class="link" href="https://feedly.com/"  target="_blank">feedly</a></li>
+                        <li><a class="link" href="https://www.inoreader.com/"  target="_blank" >Inoreader</a></li>
+                        <li><a class="link" href="https://tt-rss.org/" target="_blank" >Tiny Tiny RSS</a></li>
+                        <li><a class="link" href="https://www.thunderbird.net/fr/" target="_blank" >Thunderbird</a></li>
+                        <li>et bien d'autres <a class="link" href="https://alternativeto.net/software/feedly/about/"  target="_blank" >ici</a>  et <a class="link" href="https://fr.wikipedia.org/wiki/Comparaison_des_agr%C3%A9gateurs_de_flux"  target="_blank"  >ici</a></li>
                     </ul>
                 </li>
-                <li>
-                    <h3>les web application wrappers</h3>
+                
+                <li class="wrappers">
+                    <h3>Les web application wrappers</h3>
                     <p>
                         L'encapsulation d'applications est le processus consistant à appliquer une couche de gestion à des applications 
                         sans nécessiter de modification des applications sous-jacente. <br>
                         Voici quelques uns de ces wrappers.
                     </p>
                     <ul>
-                        <li><a href="https://rambox.app/#home">Rambox</a>, un freemium et son free fork <a href="https://alternativeto.net/software/hamsket/about/">Hamsket</a></li>
-                        <li><a href="https://getferdi.com/">Ferdi</a>, fork de <a href="https://meetfranz.com/">Franz</a></li>
+                        <li><a  class="link" href="https://rambox.app/#home"  target="_blank"  >Rambox</a>, un freemium et son free fork <a class="link" href="https://alternativeto.net/software/hamsket/about/" target="_blank"  >Hamsket</a></li>
+                        <li><a class="link" href="https://getferdi.com/" target="_blank" >Ferdi</a>, fork de <a class="link" href="https://meetfranz.com/" target="_blank" >Franz</a></li>
                     </ul>
                 </li>
+                
             </ul>
         </section>
-
+        
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     </main>
 
     <script src="scriptNav.js"></script>
+    
 </body>
 </html>
