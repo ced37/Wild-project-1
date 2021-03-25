@@ -369,15 +369,15 @@ a:visited {
   flex: 1 1 40%;
   margin: 1rem;
 }
-.newsSites {
-  background-color: rgba(7, 92, 7, 0.2);
+.news-Sites {
   border-radius: 5px;
+  background-color: rgba(7, 92, 7, 0.2);
 }
-.newsSites em {
+.news-Sites em {
   font-weight: bold;
   color:rgba(2, 54, 2, 0.8)
 }
-.newsSites, .youTube, .aggregator, .flux, .wrappers {
+.news-Sites, .youTube, .aggregator, .flux, .wrappers {
   padding: 1rem;
   
 }
