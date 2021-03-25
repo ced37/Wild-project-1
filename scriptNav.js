@@ -6,7 +6,8 @@ xCloseButton.addEventListener("click", () => document.querySelector("nav.sidenav
   // function closeNav() {
   //   document.getElementById("mySidenav").style.width = "0";
   // }
-  //Get the button:
+
+//Get the button:
 mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
